@@ -69,7 +69,7 @@ export const usePlayerStore = create<PlayerStore>()(
         try {
           await audioEngine.load(url);
           audioEngine.setVolume(isMuted ? 0 : volume);
-          audioEngine.on("timeupdate", (time, dur) => {
+          audioEngine.on("timeupdate", (time: number, dur: number) => {
             get().updateProgress(time, dur);
           });
           audioEngine.on("ended", () => {
