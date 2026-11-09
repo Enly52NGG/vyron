@@ -52,7 +52,7 @@ export function PlayerBar() {
   const [showVolume, setShowVolume] = useState(false);
   const [showEQ, setShowEQ] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animRef = useRef<number>();
+  const animRef = useRef<number | null>(null);
 
   // Visualization
   useEffect(() => {
